@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using DevFreela.API.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DevFreela.API.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
 namespace DevFreela.API.Controllers
