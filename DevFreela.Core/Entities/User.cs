@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DevFreela.Core.Entities
 {
-    class User : BaseEntity
+    public class User : BaseEntity
     {
         public User(string fullName, string email, DateTime birthDate)
         {
