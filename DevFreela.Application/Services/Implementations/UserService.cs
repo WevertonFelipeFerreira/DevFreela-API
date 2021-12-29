@@ -1,11 +1,9 @@
 ﻿using DevFreela.Application.InputModels;
 using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.ViewModels;
-using System;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using DevFreela.Core.Entities;
 using DevFreela.Infrastructure.Persistence;
+using System.Linq;
 
 namespace DevFreela.Application.Services.Implementations
 {

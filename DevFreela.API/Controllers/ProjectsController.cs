@@ -1,17 +1,18 @@
 ﻿using DevFreela.API.Models;
+using DevFreela.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace DevFreela.API.Controllers
 {
     [Route("api/projects")]
     public class ProjectsController : ControllerBase
     {
-        private readonly OpeningTimeOption _options;
-        public ProjectsController(IOptions<OpeningTimeOption> options)
+        private readonly IProjectService _projectService;
+        public ProjectsController(IProjectService projectService)
         {
-            _options = options.Value;
+            _projectService = projectService;
         }
+
         [HttpGet]
         public IActionResult Get(string query)
         {
