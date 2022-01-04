@@ -62,3 +62,5 @@ C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.I
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Application.pdb
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Core.pdb
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Infrastructure.pdb
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\Humanizer.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
