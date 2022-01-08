@@ -1,6 +1,8 @@
-﻿namespace DevFreela.Application.ViewModels
+﻿using MediatR;
+
+namespace DevFreela.Application.Commands.UpdateProject
 {
-    public class UpdateProjectModelCommand
+    public class UpdateProjectCommand: IRequest<Unit>
     {
         public int Id { get; set; }
         public string Title { get; set; }

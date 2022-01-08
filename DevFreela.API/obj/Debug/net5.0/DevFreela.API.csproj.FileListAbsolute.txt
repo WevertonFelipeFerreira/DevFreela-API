@@ -64,3 +64,7 @@ C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.C
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Infrastructure.pdb
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\Humanizer.dll
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Contracts.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
