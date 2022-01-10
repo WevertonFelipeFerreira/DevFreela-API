@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "funOoR7N4IP1rBRk1DRUYZUYZqvoWBGf5AA0esxfFR7xeVtzf7oqm2R6H9mZNouTiJPH2S241R1q1xiA80qSvQ==",
+  "dgSpecHash": "7w0hdY/qsoaf2c+MIV+yEQu2zBnhxFsjeVl7TorN2krrHW3M7g1raYqc8FqSCXa5tnSKYUDV47HYKOkp5LZ2zQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\verta\\.nuget\\packages\\dapper\\2.0.30\\dapper.2.0.30.nupkg.sha512",
+    "C:\\Users\\verta\\.nuget\\packages\\dapperextensions.netcore\\2.0.7\\dapperextensions.netcore.2.0.7.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\mediatr\\10.0.0\\mediatr.10.0.0.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\mediatr.contracts\\1.0.0\\mediatr.contracts.1.0.0.nupkg.sha512",
@@ -76,7 +78,7 @@
     "C:\\Users\\verta\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
-    "C:\\Users\\verta\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\verta\\.nuget\\packages\\system.reflection.emit.lightweight\\4.6.0\\system.reflection.emit.lightweight.4.6.0.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
