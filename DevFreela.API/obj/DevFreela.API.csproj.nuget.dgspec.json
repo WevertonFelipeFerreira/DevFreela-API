@@ -156,9 +156,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "DapperExtensions.NetCore": {
+            "Dapper": {
               "target": "Package",
-              "version": "[2.0.7, )"
+              "version": "[2.0.123, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -314,6 +314,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.13, )"
