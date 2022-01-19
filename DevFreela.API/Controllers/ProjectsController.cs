@@ -8,6 +8,7 @@ using DevFreela.Application.Queries.GetProjectById;
 using DevFreela.Application.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DevFreela.API.Controllers
@@ -32,7 +33,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id) 
+        public async Task<IActionResult> GetById(int id)
         {
             var query = new GetProjectByIdQuery(id);
 
@@ -47,19 +48,15 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CreateProjectCommand command) 
+        public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
-            if (command.Title.Length > 50)
-            {
-                return BadRequest();
-            }
             var id = await _mediator.Send(command);
 
-          return CreatedAtAction(nameof(GetById), new { id = id }, command);
+            return CreatedAtAction(nameof(GetById), new { id = id }, command);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectModelCommand command) 
+        public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectModelCommand command)
         {
             if (command.Description.Length > 200)
             {
@@ -71,7 +68,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id) 
+        public async Task<IActionResult> Delete(int id)
         {
             var command = new DeleteProjectCommand(id);
             await _mediator.Send(command);
@@ -81,8 +78,8 @@ namespace DevFreela.API.Controllers
         [HttpPost("{id}/comments")]
         public async Task<IActionResult> PostComment(int id, [FromBody] CreateCommentCommand command)
         {
-           await _mediator.Send(command);
-           return NoContent();
+            await _mediator.Send(command);
+            return NoContent();
         }
 
         [HttpPut("{id}/start")]

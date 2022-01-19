@@ -1,12 +1,12 @@
+using DevFreela.API.Configurations;
+using DevFreela.API.Filters;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.CreateUser;
-using DevFreela.Core.Repositories;
-using DevFreela.Infrastructure.Persistence;
-using DevFreela.Infrastructure.Persistence.Repositories;
+using DevFreela.Application.Validators;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,19 +26,16 @@ namespace DevFreela.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
+                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>())
+                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateProjectCommandValidator>())
+                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateCommentCommandValidator>());
 
-            var connectionsString = Configuration.GetConnectionString("DevFreelaCs");
-
-            services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionsString));
+            services.AddDb(Configuration);
 
             services.AddMediatR(typeof(CreateProjectCommand), typeof(CreateUserCommand));
 
-            services.AddScoped<IProjectRepository, ProjectRepository>();
-
-            services.AddScoped<ISkillRepository, SkillRepository>();
-
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddDependencyInjections();
 
             services.AddSwaggerGen(c =>
             {

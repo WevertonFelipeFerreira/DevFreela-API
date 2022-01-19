@@ -69,3 +69,6 @@ C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Con
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\Dapper.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\verta\source\repos\DevFreela\DevFreela.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll

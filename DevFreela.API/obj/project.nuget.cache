@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yKkCEd5Jww6kLTd8U8n95J2h0sAHrE2Cem42K3K2elHX3ylWUIQpStFMsR5B1iUTA4rKofbPIvgqhV0/54XJdQ==",
+  "dgSpecHash": "67l6b1v3Ocp/G4Qmnr4UeQ0DeoBwPa+9aAlG4CFYwIMIlmfraqB/oQTcPlIVOjogXAXw+CrQn+/cYvESUdq9TQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\verta\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\verta\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\verta\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.6\\fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "C:\\Users\\verta\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.6\\fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\mediatr\\10.0.0\\mediatr.10.0.0.nupkg.sha512",
     "C:\\Users\\verta\\.nuget\\packages\\mediatr.contracts\\1.0.0\\mediatr.contracts.1.0.0.nupkg.sha512",
