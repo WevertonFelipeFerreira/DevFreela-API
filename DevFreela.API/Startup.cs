@@ -29,8 +29,8 @@ namespace DevFreela.API
             services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
                  .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>())
                  .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateProjectCommandValidator>())
-                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateCommentCommandValidator>())
-                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginUserCommandValidator>());
+                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateCommentCommandValidator>());
+               //  .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginUserCommandValidator>());
 
             services.AddDb(Configuration);
 

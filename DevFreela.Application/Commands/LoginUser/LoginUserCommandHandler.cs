@@ -22,7 +22,7 @@ namespace DevFreela.Application.Commands.LoginUser
         {
             var passwordHash = _authService.ComputeSha256Hash(request.Password);
 
-            var user = await _userRepository.GetByEamilAndPasswordAsync(request.Email, passwordHash);
+            var user = await _userRepository.GetByEmailAndPasswordAsync(request.Email, passwordHash);
 
             if (user == null)
             {

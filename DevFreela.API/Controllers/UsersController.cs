@@ -29,7 +29,15 @@ namespace DevFreela.API.Controllers
         public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
         {
             var id = await _mediator.Send(command);
-            return CreatedAtAction(nameof(GetById), new { id = id }, command);
+
+            if(id == -1) 
+            {
+               return UnprocessableEntity(new {Title = "Unprocessable Entity", Status = 422,Detail = "Email already exist." });
+            }
+
+            var response = new { fullName = command.FullName, email = command.Email, role = command.Role };
+
+            return CreatedAtAction(nameof(GetById), new { id = id }, response);
         }
 
         [HttpPut("login")]
@@ -39,7 +47,8 @@ namespace DevFreela.API.Controllers
 
             if(loginUser == null)
             {
-                return BadRequest();
+                var response = new {Title = "Bad Request",Status = 400, Detail = "Email or password incorrect"};
+                return BadRequest(response);
             }
 
             return Ok(loginUser);

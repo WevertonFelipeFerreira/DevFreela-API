@@ -19,9 +19,13 @@ namespace DevFreela.Application.Commands.CreateUser
 
         public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            var EmailExist = await _userRepository.GetByEmail(request.Email);
+            if (EmailExist != null)
+                return -1;
+
             var passwordHash = _authService.ComputeSha256Hash(request.Password);
 
-            var user = new User(request.FullName, request.Email, request.BirthDate, request.Password, request.Role);
+            var user = new User(request.FullName, request.Email, request.BirthDate, passwordHash, request.Role);
             await _userRepository.AddAsync(user);
             return user.Id;
         }

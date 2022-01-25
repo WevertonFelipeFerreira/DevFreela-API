@@ -8,6 +8,7 @@ namespace DevFreela.Application.Validators
     {
         public CreateUserCommandValidator()
         {
+
             RuleFor(x => x.Email)
                 .EmailAddress()
                 .WithMessage("Invalid Email.");
