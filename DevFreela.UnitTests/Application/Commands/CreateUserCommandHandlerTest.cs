@@ -10,7 +10,7 @@ using Xunit;
 
 namespace DevFreela.UnitTests.Application.Commands
 {
-    public class CreateUserCommandHandlerTests
+    public class CreateUserCommandHandlerTest
     {
         [Fact]
         public async Task InputDataIsOk_Executed_ReturnUserId()

@@ -10,7 +10,7 @@ using Xunit;
 
 namespace DevFreela.UnitTests.Application.Commands
 {
-    public class LoginUserCommandHandlerTests
+    public class LoginUserCommandHandlerTest
     {
         [Fact]
         public async Task InputDataIsOk_Executed_LoginUserViewModel()

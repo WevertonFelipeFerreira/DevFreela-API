@@ -3,6 +3,7 @@ using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.DeleteProject;
 using DevFreela.Application.Commands.FinishProject;
 using DevFreela.Application.Commands.StartProject;
+using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.Queries.GetAllProjects;
 using DevFreela.Application.Queries.GetProjectById;
 using DevFreela.Application.ViewModels;
@@ -58,9 +59,9 @@ namespace DevFreela.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = id }, command);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         [Authorize(Roles = "client")]
-        public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectModelCommand command)
+        public async Task<IActionResult> Put([FromBody] UpdateProjectCommand command)
         {
             if (command.Description.Length > 200)
             {
@@ -105,5 +106,6 @@ namespace DevFreela.API.Controllers
             await _mediator.Send(command);
             return NoContent();
         }
+
     }
 }

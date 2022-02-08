@@ -11,7 +11,7 @@ using Xunit;
 
 namespace DevFreela.UnitTests.Application.Commands
 {
-    public class FinishProjectCommandHandlerTests
+    public class FinishProjectCommandHandlerTest
     {
         [Fact]
         public async Task InputDataIsOk_Executed_ReturnVoid()

@@ -14,6 +14,7 @@ namespace DevFreela.Core.Repositories
         Task SaveChangesAsync();
         Task DeleteAsync(int id);
         Task StartAsync(int id);
+        Task UpdateAsync(int id, string title, string description, decimal totalCost);
         Task FinishAsync(int id);
 
     }

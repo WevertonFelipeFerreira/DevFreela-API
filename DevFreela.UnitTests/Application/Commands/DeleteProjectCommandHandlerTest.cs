@@ -7,7 +7,7 @@ using Xunit;
 
 namespace DevFreela.UnitTests.Application.Commands
 {
-    public class DeleteProjectCommandHandlerTests
+    public class DeleteProjectCommandHandlerTest
     {
         [Fact]
         public async Task InputDataIsOk_Executed_ReturnVoid()

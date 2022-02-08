@@ -78,5 +78,14 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
 
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task UpdateAsync(int id, string title, string description, decimal totalCost)
+        {
+            var project = await GetByIdAsync(id);
+
+            project.Update(title, description, totalCost);
+
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
