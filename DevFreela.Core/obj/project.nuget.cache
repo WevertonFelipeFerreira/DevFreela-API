@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JVDXt656RgVGlwvOXMRGtWAfnEFhrxfd2Ll6LFIfoMsQf59QkJlg1nggN0BYW4z1ndhuxkMbQpxXWzdGYgDn7Q==",
+  "dgSpecHash": "u0KLl9l4y0pW/03+Y9IVMQaBpPje5aTiISJFnYUiX5llh5VIuGM+Z2tZja8Mh7tgVGvXh/sAxDrnED4a+B5ueg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\verta\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\verta\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\verta\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.Core\\DevFreela.Core.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

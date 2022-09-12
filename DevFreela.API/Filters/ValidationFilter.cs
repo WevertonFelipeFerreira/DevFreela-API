@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace DevFreela.API.Filters
 {
@@ -23,7 +20,14 @@ namespace DevFreela.API.Filters
                     .Select(x => x.ErrorMessage)
                     .ToList();
 
-                var badRequest = new { title = "Bad Request", status = 404, detail = "One or more validation occurred.", errors = errors };
+                var badRequest = new
+                {
+                    title = "Bad Request",
+                    status = 400,
+                    detail = "One or more validation occurred.",
+                    errors = errors
+                };
+
                 context.Result = new BadRequestObjectResult(badRequest);
             }
         }

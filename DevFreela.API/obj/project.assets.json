@@ -5790,11 +5790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+      "projectUniqueName": "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.API\\DevFreela.API.csproj",
       "projectName": "DevFreela.API",
-      "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+      "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.API\\DevFreela.API.csproj",
       "packagesPath": "C:\\Users\\verta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.API\\obj\\",
+      "outputPath": "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5809,20 +5809,21 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/vertao99/PersonalProject/_packaging/FirstFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
-              "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
+            "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.Application\\DevFreela.Application.csproj": {
+              "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.Application\\DevFreela.Application.csproj"
             },
-            "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-              "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+            "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.Core\\DevFreela.Core.csproj": {
+              "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.Core\\DevFreela.Core.csproj"
             },
-            "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+            "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\verta\\source\\repos\\DevFreela-API\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
             }
           }
         }
@@ -5874,24 +5875,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.12, 5.0.12]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5900,7 +5883,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
