@@ -10,6 +10,7 @@ namespace DevFreela.API.Configurations
         public static void AddDb(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionsString = configuration.GetConnectionString("DevFreelaCs");
+
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionsString));
         }
 
