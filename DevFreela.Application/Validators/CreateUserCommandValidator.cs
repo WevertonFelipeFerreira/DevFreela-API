@@ -13,6 +13,10 @@ namespace DevFreela.Application.Validators
                 .EmailAddress()
                 .WithMessage("Invalid Email.");
 
+            RuleFor(x => x.Email)
+                .NotEmpty()
+                .WithMessage("Empty email.");
+
             RuleFor(p => p.Password)
                 .Must(ValidPassword)
                 .WithMessage("Invalid Password.");

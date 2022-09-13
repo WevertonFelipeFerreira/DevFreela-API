@@ -1,10 +1,12 @@
 ﻿using DevFreela.Application.Commands.CreateUser;
 using DevFreela.Application.Commands.LoginUser;
 using DevFreela.Application.Queries.GetUser;
+using DevFreela.Application.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using static Microsoft.AspNetCore.Http.StatusCodes;
 
 namespace DevFreela.API.Controllers
 {
@@ -19,10 +21,15 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(UserViewModel),Status200OK)]
+        [ProducesResponseType(Status404NotFound)]
+        [ProducesResponseType(Status500InternalServerError)]
         public async Task<IActionResult> GetById(int id)
         {
-            var query = new GetUserQuery(id);
-            var user = await _mediator.Send(query);
+            var user = await _mediator.Send(new GetUserQuery(id));
+            if (user is null)
+                return NotFound(new { Title = "Not Found", Status = 404, Detail = "Could not find user with the given id." });
+
             return Ok(user);
         }
 
@@ -32,9 +39,9 @@ namespace DevFreela.API.Controllers
         {
             var id = await _mediator.Send(command);
 
-            if(id == -1) 
+            if (id == -1)
             {
-               return UnprocessableEntity(new {Title = "Unprocessable Entity", Status = 422,Detail = "Email already exist." });
+                return UnprocessableEntity(new { Title = "Unprocessable Entity", Status = 422, Detail = "Email already exist." });
             }
 
             var response = new { fullName = command.FullName, email = command.Email, role = command.Role };
@@ -48,9 +55,9 @@ namespace DevFreela.API.Controllers
         {
             var loginUser = await _mediator.Send(loginModel);
 
-            if(loginUser == null)
+            if (loginUser == null)
             {
-                var response = new {Title = "Bad Request",Status = 400, Detail = "Email or password incorrect"};
+                var response = new { Title = "Bad Request", Status = 400, Detail = "Email or password incorrect" };
                 return BadRequest(response);
             }
 

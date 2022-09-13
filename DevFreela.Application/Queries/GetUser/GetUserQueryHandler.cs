@@ -20,9 +20,7 @@ namespace DevFreela.Application.Queries.GetUser
             var user = await _userRepository.GetByIdAsync(request.Id);
 
             if (user == null)
-            {
                 return null;
-            }
 
             var userViewModel = new UserViewModel(user.FullName, user.Email);
 

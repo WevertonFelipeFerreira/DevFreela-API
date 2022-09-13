@@ -27,9 +27,9 @@ namespace DevFreela.Infrastructure.Auth
 
                 // Converte byte array para string
                 StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
+                foreach(byte b in bytes)
                 {
-                    builder.Append(bytes[i].ToString("x2"));
+                    builder.Append(b.ToString("x2"));
                 }
 
                 return builder.ToString();

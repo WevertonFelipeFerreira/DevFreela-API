@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DevFreela.Application.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 
@@ -15,20 +16,17 @@ namespace DevFreela.API.Filters
         {
             if (!context.ModelState.IsValid)
             {
-                var errors = context.ModelState
-                    .SelectMany(x => x.Value.Errors)
-                    .Select(x => x.ErrorMessage)
-                    .ToList();
-
-                var badRequest = new
+                var errorResponse = new ErrorResponseVm("Bad Request", "One or more validation errors ocurred", 400);
+                foreach (var modelState in context.ModelState)
                 {
-                    title = "Bad Request",
-                    status = 400,
-                    detail = "One or more validation occurred.",
-                    errors = errors
+                    var errorsMessages = modelState.Value.Errors
+                        .Select(x => x.ErrorMessage)
+                        .ToList();
+
+                    errorResponse.AddError(modelState.Key.ToLower(), errorsMessages);
                 };
 
-                context.Result = new BadRequestObjectResult(badRequest);
+                context.Result = new BadRequestObjectResult(errorResponse);
             }
         }
     }
