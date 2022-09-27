@@ -1,8 +1,10 @@
 using DevFreela.API.Configurations;
 using DevFreela.API.Filters;
+using DevFreela.API.Middlewares;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.CreateUser;
 using DevFreela.Application.Validators;
+using DevFreela.Application.ViewModels;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -105,6 +107,8 @@ namespace DevFreela.API
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseMiddleware(typeof(ErrorMiddleware));
 
             app.UseEndpoints(endpoints =>
             {

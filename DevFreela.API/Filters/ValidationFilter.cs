@@ -16,7 +16,7 @@ namespace DevFreela.API.Filters
         {
             if (!context.ModelState.IsValid)
             {
-                var errorResponse = new ErrorResponseVm("Bad Request", "One or more validation errors ocurred", 400);
+                var errorResponse = new ErrorResponse("Bad Request", "One or more validation errors ocurred", 400);
                 foreach (var modelState in context.ModelState)
                 {
                     var errorsMessages = modelState.Value.Errors
