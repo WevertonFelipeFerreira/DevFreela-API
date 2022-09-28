@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using WFL.Errors.Middlewares;
 
 namespace DevFreela.API
 {
@@ -108,7 +109,7 @@ namespace DevFreela.API
 
             app.UseAuthorization();
 
-            app.UseMiddleware(typeof(ErrorMiddleware));
+            app.UseMiddleware(typeof(WFLExceptionMiddleware));
 
             app.UseEndpoints(endpoints =>
             {
