@@ -5,6 +5,7 @@ using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.CreateUser;
 using DevFreela.Application.Validators;
 using DevFreela.Application.ViewModels;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -15,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 using System.Text;
 using WFL.Errors.Middlewares;
 
@@ -32,10 +34,15 @@ namespace DevFreela.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
-                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>())
-                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateProjectCommandValidator>())
-                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateCommentCommandValidator>());
+            //services.AddControllers();
+
+            services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)));
+
+            services.AddFluentValidationAutoValidation()
+                .AddValidatorsFromAssemblyContaining(typeof(CreateCommentCommandValidator))
+                .AddValidatorsFromAssemblyContaining(typeof(CreateProjectCommandValidator))
+                .AddValidatorsFromAssemblyContaining(typeof(CreateUserCommandValidator))
+                .AddValidatorsFromAssemblyContaining(typeof(LoginUserCommandValidator));
 
             services.AddDb(Configuration);
 
